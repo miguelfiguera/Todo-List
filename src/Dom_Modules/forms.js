@@ -6,6 +6,7 @@ function userForm() {
   inputLabel.placeholder = "John Doe";
   let buttonSubmit = document.createElement("submit");
   buttonSubmit.type = "submit";
+  buttonSubmit.innerText = "Submit";
 
   userForm.appendChild(label);
   userForm.appendChild(inputLabel);
@@ -26,7 +27,7 @@ function projectForm() {
   projectForm.appendChild(label);
   projectForm.appendChild(inputLabel);
   projectForm.appendChild(buttonSubmit);
-  return { projectForm };
+  return projectForm;
 }
 
 function toDoForm() {

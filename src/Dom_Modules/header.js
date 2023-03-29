@@ -6,6 +6,11 @@ function header() {
   let userInfo = document.createElement("div");
   let img = document.createElement("img");
   let h2UserName = document.createElement("h2");
+  title.innerText='My To-Do List'
+
+
+  buttonMenu.innerText = "Menu";
+  buttonMenu.id="menu"
 
   header.appendChild(buttonMenu);
   header.appendChild(divForTitle);
@@ -15,7 +20,7 @@ function header() {
   userInfo.appendChild(h2UserName);
   header.appendChild(userInfo);
 
-  return { header };
+  return header;
 }
 
 export { header };

@@ -3,14 +3,15 @@ function footer() {
   let footerText = document.createElement("p");
   let footerLink = document.createElement("a");
 
+  footerLink.href = "https://github.com/miguelfiguera/Todo-List";
+  footerText.innerText =
+    "CopyRight2023 MiguelFiguera, you can check this code on ";
+  footerLink.innerText = "gitHub.com";
+
   footer.appendChild(footerText);
   footerText.appendChild(footerLink);
 
-  footerLink.href = "https://github.com/miguelfiguera/Todo-List";
-  footerLink.innerText = "gitHub.com";
-  footerText.innerText = `CopyRight2023 MiguelFiguera, you can check this code on ${footerLink}`;
-
-  return { footer };
+  return footer;
 }
 
 export { footer };

@@ -6,14 +6,22 @@ import { main } from "./Dom_Modules/main";
 import { navBar } from "./Dom_Modules/navBar";
 
 const populatingDom = (() => {
-  let header = header();
-  let main = main();
-  let navbar = navBar();
-  let footer = footer();
+  let Header = header();
+  let Main = main();
+  let Navbar = navBar();
+  let Footer = footer();
   let body = document.getElementById("body");
-  arr = [, header, main, navbar, footer];
+  let arr = [Header, Main, Navbar, Footer];
 
   arr.forEach((e) => body.appendChild(e));
-
+ 
   return { body };
+})();
+
+const menuToggle=(()=>{
+    let button=document.getElementById('menu')
+    let NavBar=document.getElementById('navbar')
+    button.addEventListener('click',function(){
+        NavBar.classList.toggle("hidden");
+    })
 })();
