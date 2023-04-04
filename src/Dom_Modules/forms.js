@@ -11,7 +11,9 @@ function userForm() {
   userForm.appendChild(label);
   userForm.appendChild(inputLabel);
   userForm.appendChild(buttonSubmit);
-
+  userForm.classList.add("hidden");
+  userForm.id = "newTaskForm";
+  userForm.style.position = "relative";
   return userForm;
 }
 
@@ -19,6 +21,7 @@ function projectForm() {
   let projectForm = document.createElement("form");
   let label = document.createElement("label");
   let inputLabel = document.createElement("input");
+  inputLabel.id = "projectFormInput";
   let buttonSubmit = document.createElement("submit");
   buttonSubmit.type = "submit";
 
@@ -27,12 +30,14 @@ function projectForm() {
   projectForm.appendChild(label);
   projectForm.appendChild(inputLabel);
   projectForm.appendChild(buttonSubmit);
+  projectForm.classList.add("hidden");
+  projectForm.id = "newProjectForm";
+  projectForm.style.position = "relative";
+
   return projectForm;
 }
 
 function toDoForm() {
-  let arr = [];
-
   let todoForm = document.createElement("form");
   let titleLabel = document.createElement("label");
   let inputTitle = document.createElement("input");
@@ -53,7 +58,7 @@ function toDoForm() {
   let buttonSubmit = document.createElement("submit");
   buttonSubmit.type = "submit";
 
-  arr.push(
+  let arr = [
     titleLabel,
     inputTitle,
     descriptionLabel,
@@ -64,11 +69,12 @@ function toDoForm() {
     itCanWait,
     urgent,
     important,
-    buttonSubmit
-  );
+    buttonSubmit,
+  ];
 
-  arr.forEach((e) => todoForm.appendchild(e));
+  arr.forEach((e) => todoForm.appendChild(e));
 
+  todoForm.classList.add("hidden");
   return todoForm;
 }
 
