@@ -1,6 +1,8 @@
 function header() {
   let header = document.createElement("header");
   let divForTitle = document.createElement("div");
+  let subtitle=document.createElement('h6')
+  subtitle.id='subtitle'
   let buttonMenu = document.createElement("button");
   let title = document.createElement("h1");
   let userInfo = document.createElement("div");
@@ -9,12 +11,13 @@ function header() {
   title.innerText='My To-Do List'
 
 
-  buttonMenu.innerText = "Menu";
+  buttonMenu.innerText = "Project List";
   buttonMenu.id="menu"
 
   header.appendChild(buttonMenu);
   header.appendChild(divForTitle);
   divForTitle.appendChild(title);
+  divForTitle.appendChild(subtitle)
 
   userInfo.appendChild(img);
   userInfo.appendChild(h2UserName);
