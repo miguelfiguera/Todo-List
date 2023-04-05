@@ -143,15 +143,13 @@ const eventListener2=(()=>{
   })
 })();
 
-//this one does not work yet
 const eventListener3=(()=>{
   let button=document.getElementById('buttonAll')
   button.addEventListener('click',()=>{
     let arrOfCards=document.getElementsByClassName('miniature');
-
-    arrOfCards.forEach((e)=>{
-      e.classList.remove('hidden')
-    })
+    for(let i = 0;i<arrOfCards.length;i++){
+      arrOfCards[i].classList.remove('hidden')
+    }
 
   })
 })();

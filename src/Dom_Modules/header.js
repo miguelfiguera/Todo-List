@@ -14,6 +14,14 @@ function header() {
   buttonMenu.innerText = "Project List";
   buttonMenu.id="menu"
 
+  let buttonNew = document.createElement("button");
+  buttonNew.innerText="Add Task"
+  buttonNew.id='taskButton'
+
+let buttonAll=document.createElement("button");
+buttonAll.innerText='Show All'
+buttonAll.id='buttonAll'
+
   header.appendChild(buttonMenu);
   header.appendChild(divForTitle);
   divForTitle.appendChild(title);
@@ -22,6 +30,8 @@ function header() {
   userInfo.appendChild(img);
   userInfo.appendChild(h2UserName);
   header.appendChild(userInfo);
+  header.appendChild(buttonNew);
+  header.appendChild(buttonAll)
 
   return header;
 }
