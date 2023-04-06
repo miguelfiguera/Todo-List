@@ -31,7 +31,7 @@ function miniature(title,priority,project){
     let domTitle=document.createElement('h3')
     let domPriority=document.createElement('div')
     let p=document.createElement('p')
-    p.innerText=project
+    p.innerText=`${project}`
     p.classList.add('hidden')
     container.classList.add('miniature')
 
@@ -43,6 +43,7 @@ function miniature(title,priority,project){
 
     container.appendChild(domTitle)
     container.appendChild(domPriority)
+    container.appendChild(p)
 
     return container
 

@@ -10,7 +10,7 @@ import { TODO } from "./Logic_Modules/todoObject";
 //I have yet to define currentProject Maybe as object
 //I have to define also a function to change the current project (subtitle of header)
 // I have to find a way to keep track of the todos objects
-
+//I have to correct the Show THIS project's todos
 let current_project="default_project"
 let toDos=[]
 
@@ -158,6 +158,19 @@ const defaultProject=(()=>{
   let newButtonForNav=document.createElement('button')
   newButtonForNav.classList.add('navbarButton')
   newButtonForNav.innerText='default_project'
+
+  //this is not DRY writing xD:
+  newButtonForNav.addEventListener('click',()=>{
+    current_project=newButtonForNav.innerText
+    let arrOfCards=document.getElementsByClassName('miniature')
+
+    for(let i = 0;i<arrOfCards.length;i++){
+      let p=arrOfCards[i].lastChild
+      if(p.innerText==current_project){arrOfCards[i].classList.remove('hidden')}
+      else{arrOfCards[i].classList.add('hidden')}
+    } 
+  }) 
+
   let navbar=document.getElementById('navbar')
  current_project='default_project'
   navbar.appendChild(newButtonForNav)
